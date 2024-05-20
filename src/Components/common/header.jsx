@@ -1,11 +1,12 @@
-const header = () => {
+const Header = () => {
     return (
         <>
-        <div>
-
+        <div className="bg-dark justify-content-between">
+            <img src="/assets/FotoPersonal.jpg" alt="Foto Personal" />
+            <h1>Julian Ignacio Montenegro</h1>
         </div>
         </>
     )
 }
 
-export default header;
+export default Header;

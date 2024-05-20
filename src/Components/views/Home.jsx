@@ -1,10 +1,16 @@
-import header from "../common/header"
+import Header from "../common/header"
+import Main from "../common/main";
+import Footer from "../common/footer";
 
 
-
-const home = () => {
+const Home = () => {
     return(
         <>
+        <Header></Header>
+        <Main></Main>
+        <Footer></Footer>
         </>
     )
 }
+
+export default Home;
