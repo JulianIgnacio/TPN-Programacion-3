@@ -4,10 +4,12 @@ import FotoPersonal from '../src/assets/FotoPersonal.jpg'
 function App() {
   
   const Alumno = {
+
     nombre: "Julian",
     apellido: "Montenegro",
     edad: 24,
-    imagen: {FotoPersonal}
+    imagen: {FotoPersonal},
+    
   }
 
   return (
