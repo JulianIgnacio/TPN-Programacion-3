@@ -9,7 +9,7 @@ function App() {
     apellido: "Montenegro",
     edad: 24,
     imagen: {FotoPersonal},
-    
+    Experiencia_Laboral: ["Sanatorio 9 de Julio","Hospital Nicolas Avellaneda"]
   }
 
   return (
