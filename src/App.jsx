@@ -1,8 +1,14 @@
-import { useState } from 'react'
-import Home from './Components/views/Home'
+import Home from './pages/Home'
+import FotoPersonal from '../src/assets/FotoPersonal.jpg'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const Alumno = {
+    nombre: "Julian",
+    apellido: "Montenegro",
+    edad: 24,
+    imagen: {FotoPersonal}
+  }
 
   return (
     <>

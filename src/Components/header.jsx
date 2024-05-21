@@ -1,8 +1,10 @@
+import FotoPersonal from "../assets/FotoPersonal.jpg"
+
 const Header = () => {
     return (
         <>
-        <div className="bg-dark justify-content-between">
-            <img src="/assets/FotoPersonal.jpg" alt="Foto Personal" />
+        <div className="">
+            <img src={FotoPersonal} alt="Foto Personal" />
             <h1>Julian Ignacio Montenegro</h1>
         </div>
         </>
