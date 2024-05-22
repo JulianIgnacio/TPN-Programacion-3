@@ -1,4 +1,6 @@
 import Home from './pages/Home'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 import FotoPersonal from '../src/assets/FotoPersonal.jpg'
 
 function App() {
@@ -8,13 +10,13 @@ function App() {
     nombre: "Julian",
     apellido: "Montenegro",
     edad: 24,
-    imagen: {FotoPersonal},
+    imagen: <img src={FotoPersonal} alt="Foto Personal"/>,
     Experiencia_Laboral: ["Sanatorio 9 de Julio","Hospital Nicolas Avellaneda"]
   }
 
   return (
     <>
-    <Home></Home>
+    <Home alumno = {Alumno}></Home>
     </>
   )
 }

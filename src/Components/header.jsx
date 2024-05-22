@@ -1,12 +1,13 @@
-import FotoPersonal from "../assets/FotoPersonal.jpg"
 import '../css/header.css'
 
-const Header = () => {
+const Header = (props) => {
+
+
     return (
         <>
-        <div className="header">
-            <img src={FotoPersonal} alt="Foto Personal" />
-            <h1>Julian Ignacio Montenegro</h1>
+        <div className='d-flex justify-content-evenly'>
+                    {props.Alumno.imagen}
+            <h1>{props.Alumno.nombre} {props.Alumno.apellido}</h1>
         </div>
         </>
     )
