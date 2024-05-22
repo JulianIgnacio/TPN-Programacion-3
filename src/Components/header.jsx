@@ -7,7 +7,7 @@ const Header = (props) => {
         <>
         <div className='d-flex justify-content-evenly'>
                     {props.Alumno.imagen}
-            <h1>{props.Alumno.nombre} {props.Alumno.apellido}</h1>
+            <h1>{props.Alumno.nombre[0]} {props.Alumno.apellido}</h1>
         </div>
         </>
     )

@@ -7,11 +7,15 @@ function App() {
   
   const Alumno = {
 
-    nombre: "Julian",
+    nombre: ["Julian","Ignacio"],
     apellido: "Montenegro",
     edad: 24,
+    nacionalidad:"Argentina",
+    direccion:"Barrio el Solar mza c casa 6 Las Talitas",
     imagen: <img src={FotoPersonal} alt="Foto Personal"/>,
-    Experiencia_Laboral: ["Sanatorio 9 de Julio","Hospital Nicolas Avellaneda"]
+    Experiencia_Laboral: ["Sanatorio 9 de Julio","Hospital Nicolas Avellaneda"],
+    InstitucionesEstudio: ["Escuela Normal Juan B Alberdi","Universidad Tecnologica Nacional","Rolling Code","EGG"],
+    Estudios: ["Tecnico universitario en Programacion(En proceso)","Full stack Web Developer","QA"]
   }
 
   return (

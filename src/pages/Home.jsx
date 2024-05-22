@@ -7,8 +7,8 @@ const Home = (props) => {
     return(
         <>
         <Header Alumno={props.alumno}></Header>
-        <Main></Main>
-        <Footer></Footer>
+        <Main Alumno={props.alumno}></Main>
+        <Footer Alumno={props.alumno}></Footer>
         </>
     )
 }
