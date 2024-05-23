@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Card , Button , Collapse, Accordion} from 'react-bootstrap';
+import { Card , Button , Collapse} from 'react-bootstrap';
 import '../css/main.css'
 
 const Main = (props) => {
@@ -11,12 +11,12 @@ const Main = (props) => {
 
     return ( 
         <>
-        {//las cards row,col,container y Accordion se llaman desde react-bootstrap 
+        {//las cards row,col,container se llaman desde react-bootstrap 
 }
         <Container >
         <Row xs={1} md={2}  className="g-2">
         <Col>
-          <Card border='primary' style={{ width: '30rem' }}>
+          <Card border='primary' style={{ width: '30rem' , height: '16rem'}}>
             <Card.Body>
               <Card.Title>Datos Personales</Card.Title>
               <Card.Text>
@@ -32,7 +32,7 @@ const Main = (props) => {
           </Card>
         </Col>
         <Col>
-          <Card border='primary' style={{ width: '30rem' , height: '11rem'}}>
+          <Card border='primary' style={{ width: '30rem' , height: '16rem'}}>
             <Card.Body>
               <Card.Title>Estudios</Card.Title>
               <Card.Text>
@@ -46,7 +46,7 @@ const Main = (props) => {
           </Card>
         </Col>
         <Col>
-          <Card border='primary' style={{ width: '30rem' }}>
+          <Card border='primary' style={{ width: '30rem' ,height: '16rem'}}>
             <Card.Body>
               <Card.Title>Instituciones en las que estudio</Card.Title>
               <Card.Text>
@@ -61,10 +61,11 @@ const Main = (props) => {
           </Card>
         </Col>
         <Col>
-          <Card border='primary' style={{ width: '30rem' , minheight: '11rem'}}>
+          <Card className='d-flex'border='primary' style={{ width: '30rem' , minheight: '11rem'}}>
             <Card.Body>
               <Card.Title >Experiencia Laboral</Card.Title>
               <Card.Text>
+                <div className='d-flex justify-content-evenly'>
               <Button
               onClick={() => setOpen(!open)}
               aria-controls="example-collapse-text"
@@ -72,10 +73,19 @@ const Main = (props) => {
               >
                 {props.Alumno.Experiencia_Laboral[0]}
               </Button>
-              <div style={{ minHeight: '150px' }}>
+              <Button
+              onClick={() => setOpen2(!open2)}
+              aria-controls="example-collapse-text2"
+              aria-expanded={open2}
+              >
+                {props.Alumno.Experiencia_Laboral[1]}
+              </Button>
+                </div>
+                <section className='d-flex justify-content-evenly'>
+                <div style={{ minHeight: '150px' }}>
                 <Collapse in={open} dimension="width">
                   <div id="example-collapse-text">
-                    <Card body style={{ width: '400px' }}>
+                    <Card body style={{ width: '400px' , color:'white'}}>
                     Rol que ocupaba:
                       <br />
                        {props.Alumno.RolyTareas[0]}
@@ -87,17 +97,10 @@ const Main = (props) => {
                   </div>
                 </Collapse>
               </div>
-              <Button
-              onClick={() => setOpen2(!open2)}
-              aria-controls="example-collapse-text2"
-              aria-expanded={open2}
-              >
-                {props.Alumno.Experiencia_Laboral[1]}
-              </Button>
               <div style={{ minHeight: '150px' }}>
                 <Collapse in={open2} dimension="width">
                   <div id="example-collapse-text2">
-                    <Card body style={{ width: '450px' }}>
+                    <Card body style={{ width: '450px' , color:'white'}}>
                     Rol que ocupaba:
                       <br />
                        {props.Alumno.RolyTareas[2]}
@@ -109,6 +112,8 @@ const Main = (props) => {
                   </div>
                 </Collapse>
               </div>
+                </section>
+
               </Card.Text>
             </Card.Body>
           </Card>
