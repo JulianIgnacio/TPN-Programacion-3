@@ -1,13 +1,17 @@
-import { Container } from "react-bootstrap";
+import { Container, Row ,Col} from "react-bootstrap";
+import '../css/footer.css'
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <>
-        <Container>
+     {// la propiedad container se invoca desde react-bootsrap
+     } 
+            <Container className="footer">
         <div>
-            
+            <h5>Redes Sociales</h5>
+                {props.Alumno.RedesSociales}
         </div>
-        </Container>
+            </Container>
         </>
     )
 }
