@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Card , Accordion} from 'react-bootstrap';
+import { Card , Button , Collapse, Accordion} from 'react-bootstrap';
 import '../css/main.css'
 
 const Main = (props) => {
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
     return ( 
         <>
         {//las cards row,col,container y Accordion se llaman desde react-bootstrap 
@@ -57,30 +61,54 @@ const Main = (props) => {
           </Card>
         </Col>
         <Col>
-          <Card border='primary' style={{ width: '30rem' , height: '11rem'}}>
+          <Card border='primary' style={{ width: '30rem' , minheight: '11rem'}}>
             <Card.Body>
               <Card.Title >Experiencia Laboral</Card.Title>
               <Card.Text>
-                <Accordion className='bg-dark' defaultActiveKey="0">
-                  <Accordion.Item className='bg-dark' eventKey="0">
-                    <Accordion.Header>{props.Alumno.Experiencia_Laboral[0]}</Accordion.Header>
-                    <Accordion.Body>
-                      Rol que ocupaba:
+              <Button
+              onClick={() => setOpen(!open)}
+              aria-controls="example-collapse-text"
+              aria-expanded={open}
+              >
+                {props.Alumno.Experiencia_Laboral[0]}
+              </Button>
+              <div style={{ minHeight: '150px' }}>
+                <Collapse in={open} dimension="width">
+                  <div id="example-collapse-text">
+                    <Card body style={{ width: '400px' }}>
+                    Rol que ocupaba:
                       <br />
                        {props.Alumno.RolyTareas[0]}
                       <br />
                       Tareas que se realizaban:
                       <br />
                       {props.Alumno.RolyTareas[1]}
-                    </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item className='bg-dark' eventKey="1">
-                      <Accordion.Header>{props.Alumno.Experiencia_Laboral[1]}</Accordion.Header>
-                      <Accordion.Body>
-
-                      </Accordion.Body>
-                      </Accordion.Item>
-                      </Accordion>
+                    </Card>
+                  </div>
+                </Collapse>
+              </div>
+              <Button
+              onClick={() => setOpen2(!open2)}
+              aria-controls="example-collapse-text2"
+              aria-expanded={open2}
+              >
+                {props.Alumno.Experiencia_Laboral[1]}
+              </Button>
+              <div style={{ minHeight: '150px' }}>
+                <Collapse in={open2} dimension="width">
+                  <div id="example-collapse-text2">
+                    <Card body style={{ width: '450px' }}>
+                    Rol que ocupaba:
+                      <br />
+                       {props.Alumno.RolyTareas[2]}
+                      <br />
+                      Tareas que se realizaban:
+                      <br />
+                      {props.Alumno.RolyTareas[3]}
+                    </Card>
+                  </div>
+                </Collapse>
+              </div>
               </Card.Text>
             </Card.Body>
           </Card>
