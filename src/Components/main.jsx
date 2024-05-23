@@ -7,9 +7,10 @@ import '../css/main.css'
 const Main = (props) => {
     return ( 
         <>
-    <Row xs={1} md={2} className="g-2">
+        <Container >
+        <Row xs={1} md={2}  className="g-2">
         <Col>
-          <Card className='h-50 w-50'>
+          <Card style={{ width: '30rem' }}>
             <Card.Body>
               <Card.Title>Datos Personales</Card.Title>
               <Card.Text>
@@ -24,7 +25,7 @@ const Main = (props) => {
           </Card>
         </Col>
         <Col>
-          <Card className='h-50 w-50'>
+          <Card style={{ width: '30rem' , height: '11rem'}}>
             <Card.Body>
               <Card.Title>Estudios</Card.Title>
               <Card.Text>
@@ -38,7 +39,7 @@ const Main = (props) => {
           </Card>
         </Col>
         <Col>
-          <Card className='h-50 w-50'>
+          <Card style={{ width: '30rem' }}>
             <Card.Body>
               <Card.Title>Instituciones en las que estudio</Card.Title>
               <Card.Text>
@@ -53,7 +54,7 @@ const Main = (props) => {
           </Card>
         </Col>
         <Col>
-          <Card className='h-50 w-50'>
+          <Card style={{ width: '30rem' , height: '11rem'}}>
             <Card.Body>
               <Card.Title>Experiencia Laboral</Card.Title>
               <Card.Text>
@@ -66,6 +67,7 @@ const Main = (props) => {
           </Card>
         </Col>
     </Row>
+        </Container>
         </>
     )
 }
